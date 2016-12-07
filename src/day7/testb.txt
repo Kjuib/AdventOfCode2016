@@ -2,3 +2,5 @@ aba[bab]xyz
 xyx[xyx]xyx
 aaa[kek]eke
 zazbz[bzb]cdb
+zazbz[aaa]cdb[bzb]
+zazbz[aaa]cdb[aaa]bzb
