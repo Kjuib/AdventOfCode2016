@@ -166,10 +166,18 @@ function searchForSolution(initialState) {
     throw new Error('No solution found')
 }
 
-// The first floor contains a strontium generator, a strontium-compatible microchip, a plutonium generator, and a plutonium-compatible microchip.
-// The second floor contains a thulium generator, a ruthenium generator, a ruthenium-compatible microchip, a curium generator, and a curium-compatible microchip.
-// The third floor contains a thulium-compatible microchip.
-// The fourth floor contains nothing relevant.
+/*
+The first floor contains a strontium generator, a strontium-compatible microchip, a plutonium generator, and a plutonium-compatible microchip.
+The second floor contains a thulium generator, a ruthenium generator, a ruthenium-compatible microchip, a curium generator, and a curium-compatible microchip.
+The third floor contains a thulium-compatible microchip.
+The fourth floor contains nothing relevant.
+
+Upon entering the isolated containment area, however, you notice some extra parts on the first floor that weren't listed on the record outside:
+An elerium generator.
+An elerium-compatible microchip.
+A dilithium generator.
+A dilithium-compatible microchip.
+ */
 const initialState = {
     elevator: 0,
     items: [
@@ -178,8 +186,8 @@ const initialState = {
         1, 2, // Thulium
         1, 1, // Ruthenium
         1, 1, // Curium
-        // 0, 0, // Elerium
-        // 0, 0, // Dilithium
+        0, 0, // Elerium
+        0, 0, // Dilithium
     ]
 }
 
