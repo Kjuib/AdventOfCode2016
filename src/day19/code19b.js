@@ -1,6 +1,7 @@
 let _ = require('lodash');
 
-// let input = 3018458;
+let input = 3018458;
+// let input = 56;
 // let input = 5;
 
 function solve(input) {
@@ -38,12 +39,25 @@ function solve(input) {
         }
         current = elves[nextCurrent];
     }
-    console.log('WINNER:', input, elves[0]);
+    console.log(input, elves[0]);
 }
 
-for (let i = 5; i < 100; i++) {
-    solve(i);
+// for (let i = 0; i < 1000; i++) {
+//     solve(i);
+// }
+
+let current = 9;
+while (current < input) {
+    current *= 3;
 }
+let key = current / 3;
+current = key;
+let index = 0;
+do {
+    index += (index < key ? 1 : 2);
+    current++ ;
+} while (current < input);
+console.log('WINNER', current, index);
 
 
 
