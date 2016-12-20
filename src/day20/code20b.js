@@ -45,9 +45,20 @@ function check(toCheck) {
             console.log('OOPS');
         }
     });
-    console.log('current', current);
+    return current;
 }
 
-do {
-    check(start);
-} while (doOver);
+let answers = [];
+while (!_.last(answers) || _.last(answers) < max) {
+    let current;
+    do {
+        current = check(start);
+        if (current[0] > max) {
+            doOver = false;
+        }
+    } while (doOver);
+    answers.push(current[0]);
+    start = [current[0] + 1, max];
+}
+
+console.log('Count: ', answers.length - 1);
